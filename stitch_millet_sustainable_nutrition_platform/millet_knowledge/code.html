@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Discover the Power of Millets - MilletVitality</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-fixed": "#1b1d0e",
+                      "surface": "#fbf9f8",
+                      "surface-tint": "#56642b",
+                      "inverse-surface": "#303030",
+                      "outline-variant": "#c6c8b8",
+                      "surface-container-highest": "#e4e2e1",
+                      "primary-fixed": "#d9eaa3",
+                      "secondary": "#775a00",
+                      "background": "#fbf9f8",
+                      "primary-fixed-dim": "#bdce89",
+                      "surface-bright": "#fbf9f8",
+                      "primary-container": "#8a9a5b",
+                      "surface-container-high": "#eae8e7",
+                      "on-background": "#1b1c1c",
+                      "on-secondary": "#ffffff",
+                      "tertiary-fixed-dim": "#c8c8b0",
+                      "outline": "#76786b",
+                      "on-secondary-container": "#6f5400",
+                      "on-tertiary": "#ffffff",
+                      "tertiary-container": "#94957f",
+                      "surface-variant": "#e4e2e1",
+                      "on-surface": "#1b1c1c",
+                      "surface-container-lowest": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "secondary-fixed": "#ffdf98",
+                      "primary": "#56642b",
+                      "on-primary-fixed": "#161f00",
+                      "on-secondary-fixed": "#251a00",
+                      "surface-dim": "#dcd9d9",
+                      "surface-container": "#f0eded",
+                      "on-error-container": "#93000a",
+                      "on-tertiary-fixed-variant": "#474836",
+                      "inverse-primary": "#bdce89",
+                      "surface-container-low": "#f6f3f2",
+                      "on-primary": "#ffffff",
+                      "on-secondary-fixed-variant": "#5a4300",
+                      "on-error": "#ffffff",
+                      "on-surface-variant": "#46483c",
+                      "on-primary-fixed-variant": "#3e4c16",
+                      "error": "#ba1a1a",
+                      "on-tertiary-container": "#2c2e1d",
+                      "secondary-fixed-dim": "#f5bf22",
+                      "tertiary": "#5e604d",
+                      "secondary-container": "#fec72c",
+                      "tertiary-fixed": "#e4e4cc",
+                      "inverse-on-surface": "#f3f0f0",
+                      "on-primary-container": "#253000"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px",
+                      "2xl": "1.5rem",
+                      "3xl": "2rem"
+              },
+              "spacing": {
+                      "base": "8px",
+                      "xl": "80px",
+                      "lg": "48px",
+                      "xs": "4px",
+                      "md": "24px",
+                      "gutter": "24px",
+                      "sm": "12px",
+                      "container-max": "1200px"
+              },
+              "fontFamily": {
+                      "headline-md-mobile": ["Montserrat"],
+                      "headline-md": ["Montserrat"],
+                      "body-lg": ["Inter"],
+                      "body-md": ["Inter"],
+                      "title-lg": ["Montserrat"],
+                      "display-lg-mobile": ["Montserrat"],
+                      "label-md": ["Inter"],
+                      "display-lg": ["Montserrat"]
+              },
+              "fontSize": {
+                      "headline-md-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                      "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                      "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        .sage-shadow {
+            box-shadow: 0 4px 24px rgba(138, 154, 91, 0.12);
+        }
+        .sage-shadow-hover:hover {
+            box-shadow: 0 8px 32px rgba(138, 154, 91, 0.2);
+            transform: translateY(-2px);
+        }
+        /* Grain overlay effect */
+        .bg-grain {
+            position: relative;
+        }
+        .bg-grain::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 0;
+        }
+        .grain-content {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body-md antialiased min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar (Web/Tablet) -->
+<header class="hidden md:flex fixed top-0 w-full z-50 justify-between items-center px-6 py-4 bg-surface/90 backdrop-blur-md transition-all duration-300">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-3xl cursor-pointer hover:scale-105 transition-transform" data-icon="menu">menu</span>
+<h1 class="font-headline-md font-bold text-primary tracking-tight">MilletVitality</h1>
+</div>
+<nav class="flex items-center gap-8">
+<a class="font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Home</a>
+<!-- Active State Navigation -->
+<a class="font-label-md text-primary font-bold border-b-2 border-primary pb-1" href="#">Millets</a>
+<a class="font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Nutrition</a>
+<a class="font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Recipes</a>
+</nav>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary text-2xl cursor-pointer hover:scale-105 transition-transform" data-icon="search">search</span>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden cursor-pointer hover:ring-2 hover:ring-primary-container transition-all">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="A macro photograph of raw golden foxtail millet grains spilling out of a rustic wooden scoop against a clean white background. Soft, high-key studio lighting emphasizes the organic texture and warm golden hues. Organic minimalism aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmLnG1K0pEGOQPikXLKlip8iG8JMQbHU-KiJkXOVVQZZ_wO9uQVzczy_j75_3IgC8EfmtxSlRvX17b0OfDWXwDfawhV1pH8k8nxys_xgkSAh7DwilgH4804jwdydIE2Hva7NZt-zkmTSe66gUr6Q1-xlnCgYDNDowdJNJCzd8aISZevEwCh00Dsu4U0GvwSb30I3Kpz795w6skcq3HELW6iDydI1s7RIhgBJV5er1hgpyYSx0c200n"/>
+</div>
+</div>
+</header>
+<!-- Mobile Top Header (Simplified) -->
+<header class="md:hidden fixed top-0 w-full z-50 flex justify-between items-center px-4 py-3 bg-surface/95 backdrop-blur-sm">
+<span class="material-symbols-outlined text-primary" data-icon="menu">menu</span>
+<h1 class="font-headline-md-mobile font-bold text-primary">MilletVitality</h1>
+<span class="material-symbols-outlined text-primary" data-icon="search">search</span>
+</header>
+<!-- Main Canvas -->
+<main class="flex-grow pt-20 md:pt-28 pb-24 md:pb-12 px-4 md:px-8 max-w-container-max mx-auto w-full">
+<!-- Hero Section -->
+<section class="mb-xl text-center md:text-left flex flex-col md:flex-row items-center gap-lg">
+<div class="md:w-1/2 space-y-6">
+<h2 class="font-display-lg-mobile md:font-display-lg text-on-surface">Discover the <span class="text-primary">Power</span> of Millets</h2>
+<p class="font-body-lg text-on-surface-variant max-w-2xl">
+                    Ancient grains for a modern lifestyle. Explore the incredible nutritional density, ecological benefits, and versatile culinary applications of these sustainable superfoods.
+                </p>
+<div class="pt-4 flex flex-wrap gap-4 justify-center md:justify-start">
+<button class="bg-primary text-on-primary font-label-md px-6 py-4 rounded-full hover:bg-surface-tint transition-all hover:scale-[1.02] active:scale-95 shadow-md">
+                        Explore Nutrition
+                    </button>
+<button class="bg-transparent border-2 border-primary text-primary font-label-md px-6 py-4 rounded-full hover:bg-primary-container/10 transition-all">
+                        Compare Grains
+                    </button>
+</div>
+</div>
+<div class="md:w-1/2 w-full h-64 md:h-[400px] rounded-[32px] overflow-hidden sage-shadow relative bg-surface-container-low">
+<img alt="Millet Assortment" class="absolute inset-0 w-full h-full object-cover" data-alt="A beautiful, minimalist composition featuring three simple, matte ceramic bowls filled with different types of millets (red ragi, yellow foxtail, pearl bajra) sitting on a smooth, warm beige stone surface. Soft, natural sunlight casts gentle shadows across the grains, creating an earthy, premium, and calming aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuP0E0rSnjeGzvtmGCF6bZte0-pJfYH9Ungt63tpHt8cIPb8_UaxOpQ1Q6Zm1RrmWr9Oe3otFIFZZ41kxwViz8DXviknCsGSuxMhICNjQ0bXxFTnoR9Onl3KE2yibYOG_VHhz9MUyMjyMcXJ2GcAVIxKfhg4EPT__6dDw51EL3w1SeToTsWebnYDk8XIOzfS2hg8UiztBD4-7aDQj7Ole01gxVeMpoXgwvFZsZCl01D6g_wFFvoBuz"/>
+</div>
+</section>
+<!-- Section 1: Types of Millets (Bento Grid) -->
+<section class="mb-xl">
+<h3 class="font-headline-md-mobile md:font-headline-md text-center mb-12">Types of Millets</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card: Ragi -->
+<div class="bg-surface-container-lowest rounded-2xl sage-shadow sage-shadow-hover transition-all duration-300 flex flex-col overflow-hidden">
+<div class="h-48 w-full bg-surface-container-low relative">
+<img alt="Ragi Grains" class="w-full h-full object-cover" data-alt="Close-up macro shot of dark reddish-brown Ragi (Finger Millet) grains resting on a subtle, textured natural linen cloth. The lighting is soft and warm, highlighting the round, tiny shape of the grains. Organic and clean visual style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiEK0G52RBFCcwpAdY1pLHbNSCD5Cx2kp5S5Om58aHcBmzbdEKKNtaQX1W1KYpLQsrBMHfQUEB8LFQrdiraJ5Bu2cowKS8YWogDTBUU9OXdY9IR-tAIlKRy_DXI3shf5n8Vnt11_I56okL-FiCzh1fr1yzAa0NSBG-ujN_kA_C1ZZ0maDRs8_AIspZx8bYRIC7XHA4F6f-84cs34zwiUXI8ZXV1RsytZWtK5dP312tV-0u-5yWh3yc"/>
+<div class="absolute top-4 left-4 bg-primary-container text-on-primary-container text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">High Calcium</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h4 class="font-title-lg text-primary mb-2">Ragi (Finger Millet)</h4>
+<p class="font-body-md text-on-surface-variant mb-4 flex-grow">Known for its cooling properties and exceptional calcium content. Perfect for porridges and rotis.</p>
+<button class="text-primary font-label-md flex items-center gap-2 hover:underline group mt-auto">
+                            Explore <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card: Bajra -->
+<div class="bg-surface-container-lowest rounded-2xl sage-shadow sage-shadow-hover transition-all duration-300 flex flex-col overflow-hidden">
+<div class="h-48 w-full bg-surface-container-low relative">
+<img alt="Bajra Grains" class="w-full h-full object-cover" data-alt="A handful of grayish-green Bajra (Pearl Millet) grains scattered elegantly across a light sage green slate background. Soft, diffused lighting creates minimal shadows, emphasizing a clean, health-focused aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_LTmQ1w6SHECmVfOrlisEzRgb1_5uphzTlk_baRoQ1OayyhzlmdRW1OztFth3oNG_660gTtwPMMhSHwmsOw4kNFmzLDNkqCpBnwwN3AUfFYz03sI_xUi-oHSFMkgx0fpZJRMwZDmLL1w6PkuXjzYl9bUYPEkdMHEP12fMCqWv3gvmY6U1fyfi7b-zqQvFL_gVIe6GRq7-x5W2nu4UIT9tDWQnc_f-vMCcV55ra9aopjhPZsgZBm_O"/>
+<div class="absolute top-4 left-4 bg-secondary-container text-on-secondary-container text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Iron Rich</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h4 class="font-title-lg text-primary mb-2">Bajra (Pearl Millet)</h4>
+<p class="font-body-md text-on-surface-variant mb-4 flex-grow">A winter staple packed with iron and energy. Traditionally paired with jaggery and ghee.</p>
+<button class="text-primary font-label-md flex items-center gap-2 hover:underline group mt-auto">
+                            Explore <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card: Jowar -->
+<div class="bg-surface-container-lowest rounded-2xl sage-shadow sage-shadow-hover transition-all duration-300 flex flex-col overflow-hidden">
+<div class="h-48 w-full bg-surface-container-low relative">
+<img alt="Jowar Grains" class="w-full h-full object-cover" data-alt="Creamy white Jowar (Sorghum) grains neatly piled in a small, rustic wooden spoon resting on a pristine white background. High-key lighting, minimalist composition, evoking purity and natural nutrition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlg9jSS-4URiZ1zt-GEN09YTu_5cDpzesL5uFQFAE77ECfW4HBlbtKdyNeQwDEnIs4PykyWZ3diMsQdpCPTquPj41ZMfeGCtxCtOAtP4LIvotaMg99qjm_2_-UqRqrzwgnvJ0_0e1J11i6MrB5mWwP192JxH3XgDNetif3OZA9oMNNPWfzaim-aNJqqcNaVjw_HCFqO8M6Q5hm7nu0dg-3z8arVUVMTg74-5AU2ijC72H1AnWZU-fn"/>
+<div class="absolute top-4 left-4 bg-tertiary-container text-on-tertiary-container text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Gluten Free</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h4 class="font-title-lg text-primary mb-2">Jowar (Sorghum)</h4>
+<p class="font-body-md text-on-surface-variant mb-4 flex-grow">A versatile, globally cultivated grain. Excellent for baking and flatbreads due to its neutral flavor.</p>
+<button class="text-primary font-label-md flex items-center gap-2 hover:underline group mt-auto">
+                            Explore <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card: Foxtail -->
+<div class="bg-surface-container-lowest rounded-2xl sage-shadow sage-shadow-hover transition-all duration-300 flex flex-col overflow-hidden">
+<div class="h-48 w-full bg-surface-container-low relative">
+<img alt="Foxtail Grains" class="w-full h-full object-cover" data-alt="Vibrant golden-yellow Foxtail Millet grains spilling slightly from a minimalist glass jar onto a warm beige tabletop. Soft, warm sunlight filters from the side, creating an inviting, wholesome, and premium atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkGJ_TzmtfJw5ng-66xFvIMwmZaZefgaWU0rYFq1n8xCQ4ifUls0Z1EqJyhjEyUr5prvfnjMad0F0NWg5Y1jPsbjGtUvn62wz3BGahgxBae9G_xoQsdcpUv0AAlvFyjZEeqt2rGssQNzyC9p-aVdbiILQqMtDV21GAqoenQEZq9L_hSrZ9Iwymwt22MtWgkDecjsIr_glSa8uunmFt_ibcjdQ1jbf3SJCGSURfT1jzW8K25hR8cDYJ"/>
+<div class="absolute top-4 left-4 bg-secondary text-on-secondary text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Antioxidants</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h4 class="font-title-lg text-primary mb-2">Foxtail Millet</h4>
+<p class="font-body-md text-on-surface-variant mb-4 flex-grow">Rich in antioxidants and dietary fiber. A great rice substitute with a mildly nutty taste.</p>
+<button class="text-primary font-label-md flex items-center gap-2 hover:underline group mt-auto">
+                            Explore <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Nutritional Benefits -->
+<section class="mb-xl bg-surface-container-low rounded-[32px] p-8 md:p-12 bg-grain overflow-hidden relative">
+<div class="grain-content">
+<div class="text-center max-w-2xl mx-auto mb-10">
+<h3 class="font-headline-md-mobile md:font-headline-md text-on-surface mb-4">Nutritional Powerhouse</h3>
+<p class="font-body-md text-on-surface-variant">Millets are vastly superior to refined grains, offering a dense profile of essential macro and micronutrients crucial for vitality.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
+<!-- Icon Card -->
+<div class="flex flex-col items-center text-center p-6 bg-surface-container-lowest rounded-2xl sage-shadow">
+<div class="w-14 h-14 rounded-full bg-primary-container/20 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="grass">grass</span>
+</div>
+<h5 class="font-title-lg text-on-surface mb-2">High Fibre</h5>
+<p class="text-sm text-on-surface-variant">Promotes gut health and sustained energy release.</p>
+</div>
+<!-- Icon Card -->
+<div class="flex flex-col items-center text-center p-6 bg-surface-container-lowest rounded-2xl sage-shadow">
+<div class="w-14 h-14 rounded-full bg-secondary-container/20 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="fitness_center">fitness_center</span>
+</div>
+<h5 class="font-title-lg text-on-surface mb-2">Plant Protein</h5>
+<p class="text-sm text-on-surface-variant">Essential building blocks for muscle and repair.</p>
+</div>
+<!-- Icon Card -->
+<div class="flex flex-col items-center text-center p-6 bg-surface-container-lowest rounded-2xl sage-shadow">
+<div class="w-14 h-14 rounded-full bg-primary-container/20 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="bone">format_h4</span>
+</div>
+<h5 class="font-title-lg text-on-surface mb-2">Calcium Rich</h5>
+<p class="text-sm text-on-surface-variant">Crucial for bone density, especially in Ragi.</p>
+</div>
+<!-- Icon Card -->
+<div class="flex flex-col items-center text-center p-6 bg-surface-container-lowest rounded-2xl sage-shadow">
+<div class="w-14 h-14 rounded-full bg-secondary-container/20 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="blood_type">format_h4</span>
+</div>
+<h5 class="font-title-lg text-on-surface mb-2">Iron &amp; Folic Acid</h5>
+<p class="text-sm text-on-surface-variant">Supports healthy blood circulation and vitality.</p>
+</div>
+<!-- Icon Card -->
+<div class="flex flex-col items-center text-center p-6 bg-surface-container-lowest rounded-2xl sage-shadow">
+<div class="w-14 h-14 rounded-full bg-primary-container/20 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="bolt">bolt</span>
+</div>
+<h5 class="font-title-lg text-on-surface mb-2">Magnesium</h5>
+<p class="text-sm text-on-surface-variant">Aids in nerve function and blood sugar regulation.</p>
+</div>
+<!-- Icon Card -->
+<div class="flex flex-col items-center text-center p-6 bg-surface-container-lowest rounded-2xl sage-shadow">
+<div class="w-14 h-14 rounded-full bg-secondary-container/20 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="energy_savings_leaf">energy_savings_leaf</span>
+</div>
+<h5 class="font-title-lg text-on-surface mb-2">Low GI</h5>
+<p class="text-sm text-on-surface-variant">Prevents sugar spikes, ideal for diabetic management.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe bg-surface border-t border-outline-variant/20 shadow-[0_-4px_20px_rgba(138,154,91,0.05)]">
+<!-- Inactive -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl mb-1" data-icon="home">home</span>
+<span class="font-label-md text-[10px]">Home</span>
+</a>
+<!-- Inactive -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl mb-1" data-icon="restaurant_menu">restaurant_menu</span>
+<span class="font-label-md text-[10px]">Recipes</span>
+</a>
+<!-- Active -->
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-2xl px-5 py-1 transition-all scale-105" href="#">
+<span class="material-symbols-outlined text-2xl mb-1" data-icon="explore">explore</span>
+<span class="font-label-md text-[10px] font-bold">Discovery</span>
+</a>
+<!-- Inactive -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl mb-1" data-icon="event_available">event_available</span>
+<span class="font-label-md text-[10px]">Consult</span>
+</a>
+</nav>
+</body></html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MilletVitality - Personalized Dashboard</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed": "#1b1d0e",
+                        "surface": "#fbf9f8",
+                        "surface-tint": "#56642b",
+                        "inverse-surface": "#303030",
+                        "outline-variant": "#c6c8b8",
+                        "surface-container-highest": "#e4e2e1",
+                        "primary-fixed": "#d9eaa3",
+                        "secondary": "#775a00",
+                        "background": "#fbf9f8",
+                        "primary-fixed-dim": "#bdce89",
+                        "surface-bright": "#fbf9f8",
+                        "primary-container": "#8a9a5b",
+                        "surface-container-high": "#eae8e7",
+                        "on-background": "#1b1c1c",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed-dim": "#c8c8b0",
+                        "outline": "#76786b",
+                        "on-secondary-container": "#6f5400",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#94957f",
+                        "surface-variant": "#e4e2e1",
+                        "on-surface": "#1b1c1c",
+                        "surface-container-lowest": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed": "#ffdf98",
+                        "primary": "#56642b",
+                        "on-primary-fixed": "#161f00",
+                        "on-secondary-fixed": "#251a00",
+                        "surface-dim": "#dcd9d9",
+                        "surface-container": "#f0eded",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed-variant": "#474836",
+                        "inverse-primary": "#bdce89",
+                        "surface-container-low": "#f6f3f2",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed-variant": "#5a4300",
+                        "on-error": "#ffffff",
+                        "on-surface-variant": "#46483c",
+                        "on-primary-fixed-variant": "#3e4c16",
+                        "error": "#ba1a1a",
+                        "on-tertiary-container": "#2c2e1d",
+                        "secondary-fixed-dim": "#f5bf22",
+                        "tertiary": "#5e604d",
+                        "secondary-container": "#fec72c",
+                        "tertiary-fixed": "#e4e4cc",
+                        "inverse-on-surface": "#f3f0f0",
+                        "on-primary-container": "#253000"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "xl": "80px",
+                        "lg": "48px",
+                        "xs": "4px",
+                        "md": "24px",
+                        "gutter": "24px",
+                        "sm": "12px",
+                        "container-max": "1200px"
+                    },
+                    "fontFamily": {
+                        "headline-md-mobile": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "title-lg": ["Montserrat"],
+                        "display-lg-mobile": ["Montserrat"],
+                        "label-md": ["Inter"],
+                        "display-lg": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "headline-md-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body-md antialiased selection:bg-primary selection:text-on-primary">
+<!-- TopAppBar (Mobile Primary Header) -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-4 py-3 bg-surface shadow-[0_4px_20px_rgba(138,154,91,0.1)] md:hidden">
+<button aria-label="Menu" class="text-on-surface-variant hover:scale-105 transition-transform duration-200">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<div class="font-headline-md-mobile text-headline-md-mobile font-bold text-primary text-center flex-1">
+            MilletVitality
+        </div>
+<button aria-label="Search" class="text-on-surface-variant hover:scale-105 transition-transform duration-200">
+<span class="material-symbols-outlined">search</span>
+</button>
+</header>
+<!-- NavigationDrawer (Desktop Shell) -->
+<nav class="fixed inset-y-0 left-0 z-[60] overflow-y-auto h-full w-80 rounded-r-3xl bg-surface-container-low shadow-2xl shadow-primary/10 hidden md:block">
+<div class="p-8">
+<div class="flex items-center gap-4 mb-12">
+<img alt="User Profile Avatar" class="w-16 h-16 rounded-full object-cover border-2 border-surface-container-highest" data-alt="A pristine, highly detailed portrait photography of a serene, health-conscious individual in a softly lit, organic modern environment. Natural sunlight filtering through foliage creates a warm, premium light-mode aesthetic, embodying vitality and clean living." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBh8Q9__OV_dav__ONJ9GZiEaOS7o8U4wiyECu00eX4IyGc3zxZUvunNAE9UqbWmzrgGmuyUNXsVeRrAYq3sg0KS2jxBbE7t1ze2S57TLy5ChExt4imSgIDJZjYXFfQvoDPhGEgw5T30n7xRlTRASIpjdHPqUscQtLEazwnD7cAkqN262p4vmEjLbMpTaGjEHPlwJ6YEk_s5gVHhhaRZXkr8T42ftofIgWMgCt7q7uuP05c8TUB5G3Q"/>
+<div class="left_align">
+<h2 class="font-headline-md text-headline-md font-bold text-primary">Nourish User</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Sustainable Living Member</p>
+</div>
+</div>
+<ul class="space-y-2">
+<!-- Active Nav Item -->
+<li>
+<a class="bg-primary-container text-on-primary-container rounded-full mx-2 px-4 py-3 flex items-center gap-4 font-label-md text-label-md scale-[0.98] transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+                        Home
+                    </a>
+</li>
+<!-- Inactive Nav Items -->
+<li>
+<a class="text-on-surface-variant mx-2 px-4 py-3 hover:bg-surface-container-highest transition-colors rounded-full flex items-center gap-4 font-label-md text-label-md scale-[0.98] transition-transform" href="#">
+<span class="material-symbols-outlined">grass</span>
+                        Millets
+                    </a>
+</li>
+<li>
+<a class="text-on-surface-variant mx-2 px-4 py-3 hover:bg-surface-container-highest transition-colors rounded-full flex items-center gap-4 font-label-md text-label-md scale-[0.98] transition-transform" href="#">
+<span class="material-symbols-outlined">nutrition</span>
+                        Nutrition
+                    </a>
+</li>
+<li>
+<a class="text-on-surface-variant mx-2 px-4 py-3 hover:bg-surface-container-highest transition-colors rounded-full flex items-center gap-4 font-label-md text-label-md scale-[0.98] transition-transform" href="#">
+<span class="material-symbols-outlined">view_in_ar</span>
+                        Recipes
+                    </a>
+</li>
+<li>
+<a class="text-on-surface-variant mx-2 px-4 py-3 hover:bg-surface-container-highest transition-colors rounded-full flex items-center gap-4 font-label-md text-label-md scale-[0.98] transition-transform" href="#">
+<span class="material-symbols-outlined">psychology_alt</span>
+                        Find My Millet
+                    </a>
+</li>
+<li>
+<a class="text-on-surface-variant mx-2 px-4 py-3 hover:bg-surface-container-highest transition-colors rounded-full flex items-center gap-4 font-label-md text-label-md scale-[0.98] transition-transform" href="#">
+<span class="material-symbols-outlined">payments</span>
+                        Consultation
+                    </a>
+</li>
+</ul>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-24 pb-32 px-5 md:pl-[350px] md:pr-10 md:pt-12 md:pb-16 max-w-container-max mx-auto">
+<!-- Header Section -->
+<section class="mb-lg">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-2">Hello, Nourish User! 🌱</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Let's make your nutrition healthier and more sustainable.</p>
+</section>
+<!-- Summary Card: Nutrition Profile -->
+<section class="mb-lg relative overflow-hidden bg-surface-container-lowest rounded-[24px] shadow-[0_4px_20px_rgba(138,154,91,0.1)] border border-outline-variant/20">
+<!-- Subtle organic texture overlay -->
+<div class="absolute inset-0 opacity-5 mix-blend-multiply pointer-events-none" data-alt="A highly detailed, seamless abstract pattern featuring stylized, flowing lines resembling wheat fields and organic terrain contours. Rendered in a clean, minimalist style with soft sage green and warm beige tones to provide a premium, earthy texture overlay for a health application." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDRT631m1_X6ecZxQV5GgiBW4EH-joQ5FXh5cxrRA-a3eTirWYZXl3_blbqh23a-PhtD2gUmLaFm70wDK6nrt548RAFtnq00mT5IOClZKVmsLVuLISll9XOUXs_Yjgp3R6466YMiht6adskLURpp4jGlZwJC76GC14jhcSfbrbzmx1f5dZkjPrOGA10V1QE6_AQpZmDbo815qj83Afra1Gn6pboJACY0F7cW3Ji0BCeqpDb4vh4zn5j')"></div>
+<div class="p-6 md:p-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 relative z-10">
+<div>
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary">health_and_safety</span>
+<h2 class="font-title-lg text-title-lg text-primary">Your Nutrition Profile</h2>
+</div>
+<div class="flex flex-wrap gap-x-8 gap-y-4">
+<div>
+<span class="font-label-md text-label-md text-outline">Age Group</span>
+<p class="font-body-md text-body-md text-on-surface font-semibold mt-1">25 - 34</p>
+</div>
+<div>
+<span class="font-label-md text-label-md text-outline">Activity Level</span>
+<p class="font-body-md text-body-md text-on-surface font-semibold mt-1">Moderate Active</p>
+</div>
+<div>
+<span class="font-label-md text-label-md text-outline">Primary Goal</span>
+<p class="font-body-md text-body-md text-on-surface font-semibold mt-1">Sustainable Vitality</p>
+</div>
+</div>
+</div>
+<button class="bg-primary text-on-primary font-label-md text-label-md py-3 px-6 rounded-full hover:bg-surface-tint hover:scale-[1.02] transition-all shadow-[0_4px_20px_rgba(138,154,91,0.2)]">
+                    Update Profile
+                </button>
+</div>
+</section>
+<!-- Bento Grid: Interactive Cards -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-xl">
+<!-- Card 1: Explore -->
+<a class="group relative overflow-hidden bg-primary-container rounded-[24px] p-6 h-48 flex flex-col justify-between shadow-[0_4px_20px_rgba(138,154,91,0.1)] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(138,154,91,0.2)] transition-all duration-300" href="#">
+<div class="flex justify-between items-start z-10">
+<h3 class="font-title-lg text-title-lg text-on-primary-container w-2/3">Explore Millets</h3>
+<span class="material-symbols-outlined text-[32px] text-primary">grass</span>
+</div>
+<div class="z-10 w-10 h-10 rounded-full bg-surface-container-lowest/50 flex items-center justify-center group-hover:bg-surface-container-lowest transition-colors">
+<span class="material-symbols-outlined text-primary">arrow_forward</span>
+</div>
+</a>
+<!-- Card 2: Recipes -->
+<a class="group relative overflow-hidden bg-secondary-container rounded-[24px] p-6 h-48 flex flex-col justify-between shadow-[0_4px_20px_rgba(138,154,91,0.1)] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(138,154,91,0.2)] transition-all duration-300" href="#">
+<div class="flex justify-between items-start z-10">
+<h3 class="font-title-lg text-title-lg text-on-secondary-container w-2/3">Healthy Recipes</h3>
+<span class="material-symbols-outlined text-[32px] text-secondary">restaurant_menu</span>
+</div>
+<div class="z-10 w-10 h-10 rounded-full bg-surface-container-lowest/50 flex items-center justify-center group-hover:bg-surface-container-lowest transition-colors">
+<span class="material-symbols-outlined text-secondary">arrow_forward</span>
+</div>
+</a>
+<!-- Card 3: Nutrition Explorer -->
+<a class="group relative overflow-hidden bg-tertiary-container rounded-[24px] p-6 h-48 flex flex-col justify-between shadow-[0_4px_20px_rgba(138,154,91,0.1)] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(138,154,91,0.2)] transition-all duration-300" href="#">
+<div class="flex justify-between items-start z-10">
+<h3 class="font-title-lg text-title-lg text-on-tertiary-container w-2/3">Nutrition Explorer</h3>
+<span class="material-symbols-outlined text-[32px] text-tertiary">analytics</span>
+</div>
+<div class="z-10 w-10 h-10 rounded-full bg-surface-container-lowest/50 flex items-center justify-center group-hover:bg-surface-container-lowest transition-colors">
+<span class="material-symbols-outlined text-tertiary">arrow_forward</span>
+</div>
+</a>
+<!-- Card 4: Book Consultation -->
+<a class="group relative overflow-hidden bg-surface-container-low border border-outline-variant/30 rounded-[24px] p-6 h-48 flex flex-col justify-between shadow-[0_4px_20px_rgba(138,154,91,0.05)] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(138,154,91,0.15)] transition-all duration-300" href="#">
+<div class="flex justify-between items-start z-10">
+<h3 class="font-title-lg text-title-lg text-on-surface w-2/3">Book Consultation</h3>
+<span class="material-symbols-outlined text-[32px] text-on-surface-variant">medical_services</span>
+</div>
+<div class="z-10 w-10 h-10 rounded-full bg-surface-container-highest/50 flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-inherit">arrow_forward</span>
+</div>
+</a>
+</section>
+<!-- Featured Section: Recommended -->
+<section class="mb-xl">
+<h2 class="font-title-lg text-title-lg text-on-surface mb-6">Recommended For You</h2>
+<div class="bg-surface-container-lowest rounded-[24px] overflow-hidden shadow-[0_4px_20px_rgba(138,154,91,0.1)] flex flex-col md:flex-row">
+<div class="w-full md:w-2/5 h-48 md:h-auto relative">
+<img alt="Recommended Ragi Millet Dish" class="absolute inset-0 w-full h-full object-cover" data-alt="A stunning, high-resolution lifestyle photograph of a beautifully styled bowl of Ragi (Finger Millet) porridge garnished with fresh berries and seeds. Shot from a top-down angle on a pristine, light-wood tabletop, the lighting is soft, natural, and bright, evoking a premium, clean-eating, organic minimalist aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqiLayRCE2w_-vvHFV9eCthdz6Nl5jNRc53y3BRWBeqVZE3ZirXJUQt2yaxFMpPcR5fktIoGONTlZZrYzlRR8L-X70nnRTfnn2Z0P8FM5-3Xi2kooAbdfSnQiQHnlmPofTkWzBrMzUA0KcqY0MzFnqblipwQWKOnD5tR0bRXs4vcEBEiRlh6M441oguTYUEN3bOR9_xAwBc8edLPu5EeTGnCHkWM5A3jnhAv1yEt4ZhvJ9NibK6Jdt"/>
+</div>
+<div class="p-6 md:p-8 flex-1 flex flex-col justify-center">
+<div class="inline-block bg-primary/10 text-primary font-label-md text-label-md px-3 py-1 rounded-full mb-4 w-fit">Top Match</div>
+<h3 class="font-headline-md-mobile text-headline-md-mobile text-on-surface mb-2">Finger Millet (Ragi)</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Exceptionally high in calcium and vital amino acids. Perfect for supporting your active, sustainable lifestyle with a minimal environmental footprint.</p>
+<div class="flex flex-wrap gap-4 mt-auto">
+<button class="bg-secondary text-on-secondary font-label-md text-label-md py-2 px-5 rounded-full hover:bg-secondary-container hover:text-on-secondary-container transition-colors">
+                            View Nutrition
+                        </button>
+<button class="bg-transparent border-2 border-primary text-primary font-label-md text-label-md py-2 px-5 rounded-full hover:bg-primary/5 transition-colors">
+                            Explore Recipes
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Bottom Section: Why Choose Millets? -->
+<section>
+<h2 class="font-title-lg text-title-lg text-on-surface mb-6">Why Choose Millets?</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<!-- Small Card 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant/20 rounded-2xl p-5 text-center shadow-[0_4px_20px_rgba(138,154,91,0.05)] hover:-translate-y-1 transition-transform">
+<div class="w-12 h-12 rounded-full bg-primary-container/30 mx-auto flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-primary">monitor_weight</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface font-semibold">High Fibre</h4>
+</div>
+<!-- Small Card 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant/20 rounded-2xl p-5 text-center shadow-[0_4px_20px_rgba(138,154,91,0.05)] hover:-translate-y-1 transition-transform">
+<div class="w-12 h-12 rounded-full bg-secondary-container/30 mx-auto flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-secondary">bolt</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface font-semibold">Nutrient Rich</h4>
+</div>
+<!-- Small Card 3 -->
+<div class="bg-surface-container-lowest border border-outline-variant/20 rounded-2xl p-5 text-center shadow-[0_4px_20px_rgba(138,154,91,0.05)] hover:-translate-y-1 transition-transform">
+<div class="w-12 h-12 rounded-full bg-tertiary-container/30 mx-auto flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-tertiary">eco</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface font-semibold">Sustainable</h4>
+</div>
+<!-- Small Card 4 -->
+<div class="bg-surface-container-lowest border border-outline-variant/20 rounded-2xl p-5 text-center shadow-[0_4px_20px_rgba(138,154,91,0.05)] hover:-translate-y-1 transition-transform">
+<div class="w-12 h-12 rounded-full bg-surface-variant mx-auto flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-on-surface-variant">history_edu</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface font-semibold">Traditional</h4>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Shell) -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe bg-surface border-t border-outline-variant/20 shadow-[0_-4px_20px_rgba(138,154,91,0.1)] rounded-t-xl md:hidden">
+<!-- Active -->
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1 scale-110 duration-300 transition-transform" href="#">
+<span class="material-symbols-outlined font-label-md text-label-md" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-[10px] font-semibold mt-1">Home</span>
+</a>
+<!-- Inactive -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined font-label-md text-label-md">restaurant_menu</span>
+<span class="text-[10px] font-semibold mt-1">Recipes</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined font-label-md text-label-md">explore</span>
+<span class="text-[10px] font-semibold mt-1">Discovery</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined font-label-md text-label-md">event_available</span>
+<span class="text-[10px] font-semibold mt-1">Consult</span>
+</a>
+</nav>
+</body></html>

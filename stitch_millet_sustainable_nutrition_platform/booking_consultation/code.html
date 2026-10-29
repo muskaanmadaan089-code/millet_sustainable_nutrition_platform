@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Consultation &amp; Payment - MilletVitality</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-fixed": "#1b1d0e",
+                      "surface": "#fbf9f8",
+                      "surface-tint": "#56642b",
+                      "inverse-surface": "#303030",
+                      "outline-variant": "#c6c8b8",
+                      "surface-container-highest": "#e4e2e1",
+                      "primary-fixed": "#d9eaa3",
+                      "secondary": "#775a00",
+                      "background": "#fbf9f8",
+                      "primary-fixed-dim": "#bdce89",
+                      "surface-bright": "#fbf9f8",
+                      "primary-container": "#8a9a5b",
+                      "surface-container-high": "#eae8e7",
+                      "on-background": "#1b1c1c",
+                      "on-secondary": "#ffffff",
+                      "tertiary-fixed-dim": "#c8c8b0",
+                      "outline": "#76786b",
+                      "on-secondary-container": "#6f5400",
+                      "on-tertiary": "#ffffff",
+                      "tertiary-container": "#94957f",
+                      "surface-variant": "#e4e2e1",
+                      "on-surface": "#1b1c1c",
+                      "surface-container-lowest": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "secondary-fixed": "#ffdf98",
+                      "primary": "#56642b",
+                      "on-primary-fixed": "#161f00",
+                      "on-secondary-fixed": "#251a00",
+                      "surface-dim": "#dcd9d9",
+                      "surface-container": "#f0eded",
+                      "on-error-container": "#93000a",
+                      "on-tertiary-fixed-variant": "#474836",
+                      "inverse-primary": "#bdce89",
+                      "surface-container-low": "#f6f3f2",
+                      "on-primary": "#ffffff",
+                      "on-secondary-fixed-variant": "#5a4300",
+                      "on-error": "#ffffff",
+                      "on-surface-variant": "#46483c",
+                      "on-primary-fixed-variant": "#3e4c16",
+                      "error": "#ba1a1a",
+                      "on-tertiary-container": "#2c2e1d",
+                      "secondary-fixed-dim": "#f5bf22",
+                      "tertiary": "#5e604d",
+                      "secondary-container": "#fec72c",
+                      "tertiary-fixed": "#e4e4cc",
+                      "inverse-on-surface": "#f3f0f0",
+                      "on-primary-container": "#253000"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "base": "8px",
+                      "xl": "80px",
+                      "lg": "48px",
+                      "xs": "4px",
+                      "md": "24px",
+                      "gutter": "24px",
+                      "sm": "12px",
+                      "container-max": "1200px"
+              },
+              "fontFamily": {
+                      "headline-md-mobile": ["Montserrat"],
+                      "headline-md": ["Montserrat"],
+                      "body-lg": ["Inter"],
+                      "body-md": ["Inter"],
+                      "title-lg": ["Montserrat"],
+                      "display-lg-mobile": ["Montserrat"],
+                      "label-md": ["Inter"],
+                      "display-lg": ["Montserrat"]
+              },
+              "fontSize": {
+                      "headline-md-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                      "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                      "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-filled {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md min-h-screen">
+<!-- TopAppBar (Web & Mobile, Suppressed FAB) -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-4 py-3 bg-surface dark:bg-surface shadow-[0_4px_20px_rgba(138,154,91,0.1)]">
+<button class="hover:scale-105 transition-transform text-on-surface-variant flex items-center justify-center p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<div class="font-headline-md-mobile text-headline-md-mobile font-bold text-primary dark:text-inverse-primary">
+            MilletVitality
+        </div>
+<button class="hover:scale-105 transition-transform text-on-surface-variant flex items-center justify-center p-2">
+<span class="material-symbols-outlined">search</span>
+</button>
+</header>
+<!-- SideNav (Desktop) -->
+<aside class="hidden md:flex flex-col h-full w-80 rounded-r-3xl bg-surface dark:bg-surface shadow-2xl shadow-primary/10 fixed inset-y-0 left-0 z-[60] overflow-y-auto mt-[60px] pb-lg">
+<div class="p-lg flex items-center gap-4 bg-surface-container-low dark:bg-surface-container-low">
+<img alt="User Profile Avatar" class="w-12 h-12 rounded-full object-cover" data-alt="A professional portrait of a healthy, glowing user in a natural setting. The user has a warm smile and is wearing casual, earth-toned clothing. The lighting is soft and natural, suggesting vitality and wellness. Minimalist background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVS21Q3zQIph8XLZrTetqVsF8aiba-OPQThACb818-QoBKwwlxCwbGZnfPjWcu5tgwHHXaij1NSluAljo7SsoIAhUUukWoGhishxxAax0a8r0_O1VIOJQQ_wLMS2RAnd45zVWiBQx8RO-dNcFCoJgUpyx4D5FCh91ahs-jihyp50M6GAe8R7Nu_kFrBEBzuj0bLl0z1lATox4Aac5e93ewA4PBdkl1mzq_S0WliF2oLDMSZWloxzLc"/>
+<div>
+<h3 class="font-headline-md-mobile text-headline-md-mobile font-bold text-primary">Nourish User</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Sustainable Living Member</p>
+</div>
+</div>
+<nav class="flex-1 mt-6">
+<ul class="space-y-2">
+<li>
+<a class="flex items-center gap-3 text-on-surface-variant mx-2 px-4 py-3 hover:bg-surface-container-highest transition-colors rounded-full font-body-md text-body-md scale-[0.98] transition-transform" href="#">
+<span class="material-symbols-outlined">home</span> Home
+                    </a>
+</li>
+<li>
+<a class="flex items-center gap-3 text-on-surface-variant mx-2 px-4 py-3 hover:bg-surface-container-highest transition-colors rounded-full font-body-md text-body-md scale-[0.98] transition-transform" href="#">
+<span class="material-symbols-outlined">grass</span> Millets
+                    </a>
+</li>
+<li>
+<a class="flex items-center gap-3 text-on-surface-variant mx-2 px-4 py-3 hover:bg-surface-container-highest transition-colors rounded-full font-body-md text-body-md scale-[0.98] transition-transform" href="#">
+<span class="material-symbols-outlined">nutrition</span> Nutrition
+                    </a>
+</li>
+<li>
+<a class="flex items-center gap-3 text-on-surface-variant mx-2 px-4 py-3 hover:bg-surface-container-highest transition-colors rounded-full font-body-md text-body-md scale-[0.98] transition-transform" href="#">
+<span class="material-symbols-outlined">view_in_ar</span> Recipes
+                    </a>
+</li>
+<li>
+<a class="flex items-center gap-3 text-on-surface-variant mx-2 px-4 py-3 hover:bg-surface-container-highest transition-colors rounded-full font-body-md text-body-md scale-[0.98] transition-transform" href="#">
+<span class="material-symbols-outlined">psychology_alt</span> Find My Millet
+                    </a>
+</li>
+<li>
+<a class="flex items-center gap-3 bg-primary-container text-on-primary-container rounded-full mx-2 px-4 py-3 hover:bg-surface-container-highest transition-colors font-body-md text-body-md scale-[0.98] transition-transform" href="#">
+<span class="material-symbols-outlined icon-filled">payments</span> Consultation
+                    </a>
+</li>
+</ul>
+</nav>
+</aside>
+<main class="pt-[80px] md:pl-[320px] pb-[100px] md:pb-lg px-4 md:px-lg max-w-container-max mx-auto">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-xl mt-lg">Book a Consultation</h1>
+<!-- Section 1: Pricing Cards -->
+<section class="mb-xl">
+<h2 class="font-title-lg text-title-lg text-on-background mb-md">Choose Your Plan</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+<!-- Basic Card -->
+<div class="bg-surface-container-lowest rounded-[24px] p-lg border border-outline-variant/30 hover:-translate-y-1 transition-transform cursor-pointer">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Basic</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">A quick check-in for general guidance.</p>
+<div class="font-display-lg text-display-lg text-primary mb-6">₹299</div>
+<ul class="space-y-3 mb-8 text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check</span> 15-minute call</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check</span> General advice</li>
+</ul>
+<button class="w-full bg-transparent border-2 border-primary text-primary py-3 rounded-full font-label-md text-label-md hover:bg-primary/5 transition-colors">Select Basic</button>
+</div>
+<!-- Personalized Card (Highlighted) -->
+<div class="bg-primary-container rounded-[24px] p-lg shadow-[0_10px_30px_rgba(138,154,91,0.2)] hover:-translate-y-1 transition-transform relative cursor-pointer transform scale-105 border-2 border-primary-fixed">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-secondary-container text-on-secondary-container px-4 py-1 rounded-full font-label-md text-label-md whitespace-nowrap">Most Popular</div>
+<h3 class="font-headline-md text-headline-md text-on-primary-container mb-2">Personalized</h3>
+<p class="font-body-md text-body-md text-on-primary-container/80 mb-6">Tailored millet plan for your goals.</p>
+<div class="font-display-lg text-display-lg text-on-primary-container mb-6">₹599</div>
+<ul class="space-y-3 mb-8 text-on-primary-container/90">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-on-primary-container text-sm">check</span> 45-minute consultation</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-on-primary-container text-sm">check</span> Custom diet plan</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-on-primary-container text-sm">check</span> 1-week follow up</li>
+</ul>
+<button class="w-full bg-surface-container-lowest text-primary py-3 rounded-full font-label-md text-label-md hover:bg-surface transition-colors shadow-md">Select Personalized</button>
+</div>
+<!-- Complete Card -->
+<div class="bg-surface-container-lowest rounded-[24px] p-lg border border-outline-variant/30 hover:-translate-y-1 transition-transform cursor-pointer">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Complete</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Comprehensive health overhaul.</p>
+<div class="font-display-lg text-display-lg text-primary mb-6">₹999</div>
+<ul class="space-y-3 mb-8 text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check</span> 60-minute deep dive</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check</span> Full nutrition strategy</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check</span> 1-month support</li>
+</ul>
+<button class="w-full bg-transparent border-2 border-primary text-primary py-3 rounded-full font-label-md text-label-md hover:bg-primary/5 transition-colors">Select Complete</button>
+</div>
+</div>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xl">
+<!-- Section 2: Appointment Details -->
+<section class="space-y-md">
+<h2 class="font-title-lg text-title-lg text-on-background mb-sm">Appointment Details</h2>
+<div class="bg-surface-container-lowest rounded-[24px] p-lg shadow-[0_4px_20px_rgba(138,154,91,0.05)] border border-surface-variant">
+<div class="space-y-6">
+<!-- Nutritionist Selection -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2">Select Nutritionist</label>
+<div class="relative">
+<select class="w-full bg-surface-container-lowest border border-outline-variant/30 rounded-xl px-4 py-3 appearance-none focus:ring-0 focus:border-primary focus:shadow-[0_0_0_4px_rgba(138,154,91,0.2)] transition-shadow">
+<option>Dr. Ananya Sharma - Dietitian</option>
+<option>Dr. Rohan Patel - Holistic Nutrition</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Date Selection -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2">Select Date</label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest border border-outline-variant/30 rounded-xl px-4 py-3 focus:ring-0 focus:border-primary focus:shadow-[0_0_0_4px_rgba(138,154,91,0.2)] transition-shadow" type="date"/>
+</div>
+</div>
+<!-- Time Selection -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2">Select Time</label>
+<div class="grid grid-cols-3 gap-3">
+<button class="py-2 border border-outline-variant/30 rounded-xl hover:border-primary transition-colors focus:bg-primary-container focus:text-on-primary-container focus:border-primary">10:00 AM</button>
+<button class="py-2 border border-outline-variant/30 rounded-xl hover:border-primary transition-colors focus:bg-primary-container focus:text-on-primary-container focus:border-primary bg-primary-container text-on-primary-container border-primary">11:30 AM</button>
+<button class="py-2 border border-outline-variant/30 rounded-xl hover:border-primary transition-colors focus:bg-primary-container focus:text-on-primary-container focus:border-primary">02:00 PM</button>
+<button class="py-2 border border-outline-variant/30 rounded-xl hover:border-primary transition-colors focus:bg-primary-container focus:text-on-primary-container focus:border-primary">04:00 PM</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Payment & Summary -->
+<section class="space-y-md">
+<h2 class="font-title-lg text-title-lg text-on-background mb-sm">Order Summary &amp; Payment</h2>
+<div class="bg-surface-container-lowest rounded-[24px] p-lg shadow-[0_4px_20px_rgba(138,154,91,0.05)] border border-surface-variant flex flex-col justify-between h-full">
+<div>
+<!-- Summary -->
+<div class="space-y-4 mb-8">
+<div class="flex justify-between items-center text-on-surface-variant">
+<span>Personalized Millet Plan</span>
+<span>₹599.00</span>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant">
+<span>Taxes (GST 18%)</span>
+<span>₹107.82</span>
+</div>
+<hr class="border-outline-variant/30"/>
+<div class="flex justify-between items-center font-headline-md text-headline-md text-on-surface">
+<span>Total</span>
+<span class="text-primary">₹706.82</span>
+</div>
+</div>
+<!-- Payment Methods -->
+<div class="mb-8">
+<label class="block font-label-md text-label-md text-on-surface-variant mb-4">Payment Method</label>
+<div class="space-y-3">
+<label class="flex items-center gap-3 p-4 border border-primary bg-primary/5 rounded-xl cursor-pointer">
+<input checked="" class="text-primary focus:ring-primary h-5 w-5 border-outline-variant" name="payment" type="radio"/>
+<span class="flex items-center gap-2"><span class="material-symbols-outlined">account_balance_wallet</span> UPI</span>
+</label>
+<label class="flex items-center gap-3 p-4 border border-outline-variant/30 rounded-xl cursor-pointer hover:border-primary/50 transition-colors">
+<input class="text-primary focus:ring-primary h-5 w-5 border-outline-variant" name="payment" type="radio"/>
+<span class="flex items-center gap-2"><span class="material-symbols-outlined">credit_card</span> Credit / Debit Card</span>
+</label>
+<label class="flex items-center gap-3 p-4 border border-outline-variant/30 rounded-xl cursor-pointer hover:border-primary/50 transition-colors">
+<input class="text-primary focus:ring-primary h-5 w-5 border-outline-variant" name="payment" type="radio"/>
+<span class="flex items-center gap-2"><span class="material-symbols-outlined">account_balance</span> Net Banking</span>
+</label>
+</div>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-full font-label-md text-label-md hover:-translate-y-1 hover:shadow-lg transition-all flex items-center justify-center gap-2">
+                        Pay Securely <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</section>
+</div>
+</main>
+<!-- BottomNavBar (Mobile) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe bg-surface dark:bg-surface border-t border-outline-variant/20 rounded-t-xl shadow-[0_-4px_20px_rgba(138,154,91,0.1)]">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors scale-110 duration-300" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-md text-label-md mt-1 text-[10px]">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors scale-110 duration-300" href="#">
+<span class="material-symbols-outlined">restaurant_menu</span>
+<span class="font-label-md text-label-md mt-1 text-[10px]">Recipes</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors scale-110 duration-300" href="#">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-label-md text-label-md mt-1 text-[10px]">Discovery</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1 hover:text-primary transition-colors scale-110 duration-300" href="#">
+<span class="material-symbols-outlined icon-filled">event_available</span>
+<span class="font-label-md text-label-md mt-1 text-[10px] font-bold">Consult</span>
+</a>
+</nav>
+<!-- Success Overlay (Hidden by default, shown for demonstration if triggered via JS) -->
+<!-- 
+    <div class="fixed inset-0 bg-inverse-surface/80 z-[100] flex items-center justify-center p-4">
+        <div class="bg-surface-container-lowest rounded-[24px] p-xl max-w-md w-full text-center shadow-2xl relative">
+            <button class="absolute top-4 right-4 text-on-surface-variant hover:text-on-surface"><span class="material-symbols-outlined">close</span></button>
+            <div class="w-20 h-20 bg-primary-container rounded-full flex items-center justify-center mx-auto mb-6">
+                <span class="material-symbols-outlined text-4xl text-on-primary-container icon-filled">check_circle</span>
+            </div>
+            <h2 class="font-display-lg-mobile text-display-lg-mobile text-on-surface mb-2">Appointment Confirmed 🎉</h2>
+            <p class="font-body-md text-body-md text-on-surface-variant mb-6">Your consultation with Dr. Ananya Sharma is scheduled.</p>
+            
+            <div class="bg-surface-container p-4 rounded-xl mb-8 flex justify-between items-center text-left">
+                <div>
+                    <div class="font-label-md text-label-md text-on-surface-variant">Booking ID</div>
+                    <div class="font-title-lg text-title-lg text-on-surface">#MV-84729</div>
+                </div>
+            </div>
+
+            <div class="space-y-3">
+                <button class="w-full bg-secondary-container text-on-secondary-container py-3 rounded-full font-label-md text-label-md hover:bg-secondary-container/80 transition-colors flex items-center justify-center gap-2">
+                    <span class="material-symbols-outlined text-sm">calendar_month</span> Add to Calendar
+                </button>
+                <button class="w-full bg-transparent border border-outline-variant text-on-surface-variant py-3 rounded-full font-label-md text-label-md hover:bg-surface-variant transition-colors flex items-center justify-center gap-2">
+                    <span class="material-symbols-outlined text-sm">download</span> Download Receipt
+                </button>
+            </div>
+        </div>
+    </div>
+    -->
+</body></html>
